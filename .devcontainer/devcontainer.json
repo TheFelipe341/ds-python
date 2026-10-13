@@ -1,0 +1,21 @@
+{
+  "name": "DS — Python (Prof. Felipe)",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "postCreateCommand": "pip install --user -r requirements.txt",
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-python.python", "ms-python.vscode-pylance", "ms-toolsai.jupyter", "mhutchie.git-graph"],
+      "settings": {
+        "editor.fontSize": 15,
+        "editor.fontLigatures": false,
+        "editor.tabSize": 4,
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "workbench.startupEditor": "readme",
+        "locale": "pt-br"
+      }
+    },
+    "codespaces": { "openFiles": ["README.md", "exemplos/01_ola_mundo.py"] }
+  },
+  "forwardPorts": [5000, 8000],
+  "portsAttributes": { "5000": { "label": "Flask" }, "8000": { "label": "Servidor" } }
+}
